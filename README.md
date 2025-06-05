@@ -11,22 +11,22 @@ This is a 45-minute technical challenge for a senior fullstack JavaScript develo
 
 ## Challenge Tasks
 
-### 1. Server-Side Bug Fix (10 minutes)
+### 1. Server-Side Bug Fix
 - [ ] Identify and fix the issue in the task status update mutation
 - [ ] Ensure proper error handling in the GraphQL resolver
 - [ ] Verify the fix works with the frontend implementation
 
-### 2. Task Management Implementation (20 minutes)
-- [ ] Implement the GraphQL mutation for updating task status
-- [ ] Add error handling for failed status updates
-- [ ] Implement optimistic updates for better UX
-- [ ] Add loading states during status updates
+### 2. State Management Implementation
+- [ ] Create a custom TaskContext using React Context API
+- [ ] Implement a useTaskManager hook for centralized state operations
+- [ ] Add optimistic updates for task status changes
+- [ ] Implement proper error handling and state recovery
+- [ ] Refactor existing components to use the new state management
 
-### 3. Task Creation Feature (15 minutes)
+### 3. Task Creation Feature
 - [ ] Create a new task form component
 - [ ] Implement the GraphQL mutation for creating tasks
 - [ ] Add form validation
-- [ ] Add loading state during task creation
 
 ## Project Structure
 ```
