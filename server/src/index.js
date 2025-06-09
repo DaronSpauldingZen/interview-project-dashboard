@@ -6,7 +6,7 @@ const { resolvers } = require('./resolvers')
 
 // Enable CORS
 fastify.register(cors, {
-  origin: 'http://localhost:5173', // Allow requests from the React app
+  origin: true, // Allow requests from any origin
   credentials: true
 })
 
@@ -14,13 +14,16 @@ fastify.register(cors, {
 fastify.register(mercurius, {
   schema,
   resolvers,
-  graphiql: true // Enable GraphiQL interface for development
+  graphiql: true, // Enable GraphiQL interface for development
+  path: '/graphql' // Explicitly set the GraphQL endpoint path
 })
 
 // Start server
 const start = async () => {
   try {
-    await fastify.listen({ port: 3000 })
+    await fastify.listen({ port: 3000, host: '0.0.0.0' })
+    console.log('Server running at http://localhost:3000')
+    console.log('GraphQL playground available at http://localhost:3000/graphql')
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
