@@ -1,0 +1,44 @@
+{
+  "name": "Interview Project Dashboard",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [3000, 5173],
+  "portsAttributes": {
+    "3000": {
+      "visibility": "public",
+      "protocol": "http"
+    },
+    "5173": {
+      "visibility": "public",
+      "protocol": "http"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          }
+        }
+      }
+    }
+  },
+  "postCreateCommand": "npm install && cd client && npm install && cd ../server && npm install",
+  "remoteUser": "node",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": true,
+      "upgradePackages": true
+    }
+  }
+} 
