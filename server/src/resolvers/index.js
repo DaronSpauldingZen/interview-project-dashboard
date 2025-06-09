@@ -42,8 +42,8 @@ const resolvers = {
         updatedAt: new Date().toISOString()
       }   
  
-      filteredTasks.push(task)
-      await writeTasks(filteredTasks)
+      tasks.push(task)
+      await writeTasks(tasks)
       
       return task
     },

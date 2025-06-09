@@ -10,11 +10,5 @@
     "title": "Implement task creation form",
     "description": "Create a new form component for adding tasks",
     "status": "IN_PROGRESS"
-  },
-  {
-    "id": "1",
-    "title": "New Task",
-    "description": "This is a bug",
-    "status": "IN_PROGRESS"
   }
 ]
